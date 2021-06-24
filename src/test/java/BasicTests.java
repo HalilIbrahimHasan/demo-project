@@ -14,7 +14,7 @@ public class BasicTests {
     @Test
     public void test1(){
         driver = Driver.getDriver();
-        driver.get(ConfigurationReader.getProperty("environment"));
+        driver.get("https://www.amazon.com");
         System.out.println(driver.getTitle());
     }
 
