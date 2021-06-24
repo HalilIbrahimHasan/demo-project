@@ -6,19 +6,16 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class BasicTests {
 
-    public WebDriver driver;
+    protected static WebDriver driver;
 
+    public BasicTests(){
+
+    }
     @Test
     public void test1(){
-        WebDriverManager.chromedriver().setup();
-        System.out.println("Driver is being set-up");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("headless");
-        options.addArguments("disable-gpu");
-        driver = new ChromeDriver(options);
-        driver.get("https://gmibank.com");
+        driver = Driver.getDriver();
+        driver.get(ConfigurationReader.getProperty("environment"));
         System.out.println(driver.getTitle());
-
     }
 
 
