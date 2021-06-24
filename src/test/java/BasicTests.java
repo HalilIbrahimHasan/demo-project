@@ -16,7 +16,7 @@ public class BasicTests {
         options.addArguments("headless");
         options.addArguments("disable-gpu");
         driver = new ChromeDriver(options);
-        driver.get("https://gmibank.com/");
+        driver.get("https://gmibank.com");
         System.out.println(driver.getTitle());
 
     }
