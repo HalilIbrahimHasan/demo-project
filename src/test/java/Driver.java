@@ -40,7 +40,11 @@ public class Driver {
                 driver = new SafariDriver();
             } else if ("chrome-headless".equals(browser)) {
                 WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("headless");
+                options.addArguments("disable-gpu");
+                driver = new ChromeDriver(options);
+
             }
         }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
