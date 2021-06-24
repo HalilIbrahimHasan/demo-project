@@ -16,6 +16,12 @@ public class BasicTests {
         driver = Driver.getDriver();
         driver.get("https://www.amazon.com");
         System.out.println(driver.getTitle());
+        HeaderServices hs = new HeaderServices();
+        for (int i = 0; i < hs.allHeaders.size() && i<8; i++) {
+            System.out.println(hs.allHeaders.get(i).getText());
+        }
+
+
     }
 
 
