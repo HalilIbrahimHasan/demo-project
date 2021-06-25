@@ -8,13 +8,11 @@ public class BasicTests {
 
 
 
-    public BasicTests(){
 
-    }
     @Test
     public void test1(){
 
-        Driver.getDriver().get("https://www.amazon.com");
+        Driver.getDriver().get("https://www.amazon.com/");
         System.out.println(Driver.getDriver().getTitle());
 
 
