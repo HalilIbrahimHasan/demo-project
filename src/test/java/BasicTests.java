@@ -6,16 +6,16 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class BasicTests {
 
-    protected static WebDriver driver;
+
 
     public BasicTests(){
 
     }
     @Test
     public void test1(){
-        driver = Driver.getDriver();
-        driver.get("https://www.amazon.com/");
-        System.out.println(driver.getTitle());
+
+        Driver.getDriver().get("https://www.amazon.com");
+        System.out.println(Driver.getDriver().getTitle());
 
 
 
